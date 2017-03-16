@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Select</Title>
+      <Author>Matthew O'Leary</Author>
+      <Description></Description>
+      <Shortcut>dbs</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+      </Imports> 
+      <Declarations>
+        <Literal>
+          <ID>Condition</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with an SQL String.</ToolTip>
+          <Default></Default>
+        </Literal>
+        <Literal>
+          <ID>Condition</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with an Parameter Name.</ToolTip>
+          <Default></Default>
+        </Literal>
+        <Literal>
+          <ID>Condition</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with a Parameter Value</ToolTip>
+          <Default>""</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body">
+        <![CDATA[db.SelectSQL($Condition$, New List(Of SqlParameter) From {$Condition$, New List(Of SqlParameter) From {
+    New SqlParameter With { .ParameterName = "@$Condition$", .Value = $Condition$, .SqlDbType = SqlDbType.Int }   
+  })]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

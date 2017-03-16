@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Select</Title>
+      <Author>Matthew O'Leary</Author>
+      <Description></Description>
+      <Shortcut>spv</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+      </Imports> 
+      <Declarations> 
+        <Literal>
+          <ID>Condition</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with an Parameter Name.</ToolTip>
+          <Default></Default>
+        </Literal>
+        <Literal>
+          <ID>Condition</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with a Parameter Value</ToolTip>
+          <Default></Default>
+        </Literal>
+        <Literal>
+          <ID>Condition</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with a VarChar Size</ToolTip>
+          <Default>50</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body">
+        <![CDATA[New SqlParameter With { .ParameterName = "@$Condition$", .Value = $Condition$, .SqlDbType = SqlDbType.VarChar, .Size = $Condition$ }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
